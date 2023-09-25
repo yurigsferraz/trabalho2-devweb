@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flu's Clock</title>
+    <link rel="stylesheet" href="/cwdc/mainPage/LCG.css">
+    <style>
+        :root {
+            --cgrena: #ffffff;
+            --cgreen: #ffffff;
+            --corange: rgb(255, 0, 0);
+            --cwhite: white;
+            --cwhite1: #ffffff;
+            --cwhite2: #fefefe;
+            --cwhite3: #ffffff;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: gray;
+        }
+        #flu {
+            font-family: cursive;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        #container {
+            position: relative;
+            width: 512px;
+            height: 512px;
+            margin-bottom: 20px;
+        }
+        canvas {
+            position: absolute;
+        }
+        #handles {
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <p id="flu">
+        <a href="https://vasco.com.br/">Clube de Regatas Vasco da Gama</a>
+    </p>
+
+    <div id="container">
+        <canvas id="clock" width="512" height="512">Please upgrade your browser.</canvas>
+        <canvas id="handles" width="512" height="512">Please upgrade your browser.</canvas>
+    </div>
+
+    <audio title="Hino do Gigante da Colina!" controls loop>
+        <source src="hino-vasco.mp3" type="audio/mpeg" />
+        Please upgrade your browser!
+    </audio>
+
+    <small>Hino do Clube de Regatas do Vasco da Gama por <a href="https://vejario.abril.com.br/cidade/curiosidades-hinos-times-cariocas/">Lamartine Babo.</a></small>
+
+    <iframe title="Os 5 gols de Roberto Dinamite contra o Corinthians" width="320" height="240" src="https://www.youtube.com/embed/P4xuu_f79UY?si=laG4EU1LWIPSiuIz" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    <script src="suncalc.js"></script>
+    <script src="clock.js"></script>
+    <script src="date.js"></script>
+</body>
+</html>
