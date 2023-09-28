@@ -74,6 +74,18 @@
         #handles {
             z-index: 2;
         }
+
+        #audio-section {
+            background-color: black;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 600px;
+        }
     </style>
 </head>
 <body>
@@ -94,6 +106,12 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/PA6kTi1Zj6M?si=5zLIUoBWzjt8SALh" class="video-iframe" title="Campeão da Copa do Brasil" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     
+    <div id="audio-section">
+        <audio title="Hino do Gigante da Colina!" controls loop>
+            <source src="hino-vasco.mp3" type="audio/mpeg" />
+        </audio>
+    </div>
+
     <script src="suncalc.js"></script>
     <script src="clock.js"></script>
     <script src="date.js"></script>
