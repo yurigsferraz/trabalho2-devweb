@@ -8,28 +8,60 @@
     <style>
         :root {
             --cgrena: #ffffff;
-            --cgreen: #ffffff;
+            --cgreen: #f75252;
             --corange: rgb(255, 0, 0);
-            --cwhite: white;
-            --cwhite1: #ffffff;
-            --cwhite2: #fefefe;
-            --cwhite3: #ffffff;
+            --cwhite: #f75252;
+            --cwhite1: #f75252;
+            --cwhite2: #f75252;
+            --cwhite3: #f75252;
         }
         body {
             margin: 0;
             padding: 0;
+            background-color: rgb(197, 197, 197);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            background-color: gray;
+            min-height: 100vh;
         }
+
+        #menu-bar {
+            background-color: black;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        #menu-bar a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #video-section {
+            background-color: black;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .video-iframe {
+            width: calc(33.33% - 20px);
+            max-width: 800px;
+            height: 400px;
+            margin: 10px;
+        }
+
         #flu {
-            font-family: cursive;
+            font-style: unset;
             font-size: 30px;
             margin-bottom: 20px;
         }
+
         #container {
             position: relative;
             width: 512px;
@@ -45,23 +77,22 @@
     </style>
 </head>
 <body>
-    <p id="flu">
-        <a href="https://vasco.com.br/">Clube de Regatas Vasco da Gama</a>
-    </p>
+    <div id="menu-bar">
+        <p id="flu">
+            <a href="https://vasco.com.br/">Clube de Regatas Vasco da Gama</a>
+        </p>
+    </div>
 
     <div id="container">
         <canvas id="clock" width="512" height="512">Please upgrade your browser.</canvas>
         <canvas id="handles" width="512" height="512">Please upgrade your browser.</canvas>
     </div>
 
-    <audio title="Hino do Gigante da Colina!" controls loop>
-        <source src="hino-vasco.mp3" type="audio/mpeg" />
-        Please upgrade your browser!
-    </audio>
-
-    <small>Hino do Clube de Regatas do Vasco da Gama por <a href="https://vejario.abril.com.br/cidade/curiosidades-hinos-times-cariocas/">Lamartine Babo.</a></small>
-
-    <iframe title="Os 5 gols de Roberto Dinamite contra o Corinthians" width="320" height="240" src="https://www.youtube.com/embed/P4xuu_f79UY?si=laG4EU1LWIPSiuIz" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div id="video-section">
+        <iframe title="Os 5 gols de Roberto Dinamite contra o Corinthians" class="video-iframe" src="https://www.youtube.com/embed/P4xuu_f79UY?si=laG4EU1LWIPSiuIz" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/RtFMglCiJBM?si=ym-bWZ7Q2CPb-WtX" class="video-iframe" title="Campeão da Libertadores" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PA6kTi1Zj6M?si=5zLIUoBWzjt8SALh" class="video-iframe" title="Campeão da Copa do Brasil" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
     
     <script src="suncalc.js"></script>
     <script src="clock.js"></script>

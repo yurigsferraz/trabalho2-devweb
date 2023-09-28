@@ -254,7 +254,7 @@ function drawClock(place) {
   // Browsers first loads a compressed version of image, then decodes it, finally paints it.
   // Draw the logo.
   const img = new Image();
-  img.src = "./pngwing.com.png";
+  img.src = "./rolex_bezel.png";
   img.decode().then(() => {
     // Translate the center of the logo
     // to the center of the canvas.
